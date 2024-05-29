@@ -257,7 +257,7 @@ class NanoGateway:
             self.rxok += 1
             rx_data = self.lora_sock.recv(256)
             stats = lora.stats()
-            packet = self._make_node_packet(rx_data, self.rtc.now(), stats.rx_timestamp, stats.sfrx, self.bw, stats.rssi, 222)
+            packet = self._make_node_packet(rx_data, self.rtc.now(), stats.rx_timestamp, stats.sfrx, self.bw, stats.rssi, 333)
             packet = self.frequency_rounding_fix(packet, self.frequency)
             self._push_data(packet)
             self._log('Received packet: {}', packet)
